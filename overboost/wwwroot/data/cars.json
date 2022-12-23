@@ -1,0 +1,101 @@
+[
+    {
+        "Id": 1,
+        "Year": 1992,
+        "Make": "Toyota",
+        "Model": "Camry",
+        "img": "imgs/cars/camry.jpg",
+        "Description": "2.2 i4: 125hp",
+        "Ratings": null
+    },
+    {
+        "Id": 2,
+        "Year": 1995,
+        "Make": "GMC",
+        "Model": "Sierra",
+        "img": "imgs/cars/sierra.jpg",
+        "Description": "5.7 v8: 300hp",
+        "Ratings": null
+    },
+    {
+        "Id": 3,
+        "Year":2001,
+        "Make": "Toyota",
+        "Model": "Corolla",
+        "img": "imgs/cars/corolla.jpg",
+        "Description": "1.8 i4: 130hp",
+        "Ratings": null
+    },
+    {
+        "Id": 4,
+        "Year": 2001,
+        "Make": "Subaru",
+        "Model": "Legacy",
+        "img": "imgs/cars/legacy.jpg",
+        "Description": "2.5 flat 4: 165hp",
+        "Ratings": null
+    },
+    {
+        "Id": 5,
+        "Year": 2002,
+        "Make": "Toyota",
+        "Model": "Avalon",
+        "img": "imgs/cars/avalon.jpg",
+        "Description": "3.0 v6: 210hp",
+        "Ratings": null
+    },
+    {
+        "Id": 6,
+        "Year": 2007,
+        "Make": "Mazda",
+        "Model": "Mazdaspeed3",
+        "img": "imgs/cars/mazdaspeed3.jpg",
+        "Description": "Turbo 2.3 i4: 320hp",
+        "Ratings": null
+    },
+    {
+        "Id": 7,
+        "Year": 2000,
+        "Make": "Jeep",
+        "Model": "Grand Cherokee",
+        "img": "imgs/cars/grandcherokee.jpg",
+        "Description": "4.0 i6: 195hp",
+        "Ratings": null
+    },
+    {
+        "Id": 8,
+        "Year": 1994,
+        "Make": "Mazda",
+        "Model": "Miata",
+        "img": "imgs/cars/miata.jpg",
+        "Description": "1.8 i4: 95hp",
+        "Ratings": null
+    },
+    {
+        "Id": 9,
+        "Year": 2019,
+        "Make": "Volkswagen",
+        "Model": "Jetta",
+        "img": "imgs/cars/jetta.jpg",
+        "Description": "Turbo 1.4 i4: 150hp",
+        "Ratings": null
+    },
+    {
+        "Id": 10,
+        "Year": 2019,
+        "Make": "Volkswagen",
+        "Model": "GTI",
+        "img": "imgs/cars/gti.jpg",
+        "Description": "Turbo 2.0 i4: 315hp",
+        "Ratings": null
+    },
+    {
+        "Id": 11,
+        "Year": 2018,
+        "Make": "Audi",
+        "Model": "A3",
+        "img": "imgs/cars/a3.jpg",
+        "Description": "Turbo 2.0 i4: 225hp",
+        "Ratings": null
+    }
+]

@@ -9,7 +9,31 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\NewFolder1\**" />
+    <Content Remove="wwwroot\NewFolder1\**" />
+    <EmbeddedResource Remove="wwwroot\NewFolder1\**" />
+    <None Remove="wwwroot\NewFolder1\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Models\Car.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\imgs\" />
+    <Folder Include="wwwroot\data\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\imgs\cars\corolla.jpg" />
+    <None Include="wwwroot\imgs\cars\jetta.jpg" />
+    <None Include="wwwroot\imgs\cars\mazdaspeed3.jpg" />
+    <None Include="wwwroot\imgs\cars\miata.JPG" />
+    <None Include="wwwroot\imgs\cars\sierra.jpg" />
   </ItemGroup>
 
 </Project>

@@ -5,6 +5,18 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Welcome to Overboost</h1>
+    <p><a>A small application to track cars I've owned and the stats about them.</a></p>
+</div>
+
+<div class="card-columns">
+    @foreach (var Car in Model.Cars)
+    {
+        <div class="card">
+            <div class="card-img" style="background-image: url('@Car.Image');"></div>
+            <div class="card-body">
+                <h5 class="card-title">@Car.Year</h5>
+            </div>
+        </div>
+    }
 </div>
