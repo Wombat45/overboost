@@ -1,8 +1,8 @@
-﻿using overboost;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 using overboost.Models;
+using overboost.Services;
 
-namespace overboost
+namespace overboost.Pages
 {
     public class IndexModel : PageModel
     {

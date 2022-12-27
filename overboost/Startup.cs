@@ -1,4 +1,6 @@
-﻿namespace overboost
+﻿using overboost.Services;
+
+namespace overboost
 {
     public class Startup
     {
