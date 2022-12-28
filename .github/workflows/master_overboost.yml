@@ -23,14 +23,14 @@ jobs:
       uses: docker/login-action@v1
       with:
         registry: https://mikesite.azurecr.io/
-        username: ${{ secrets.AzureAppService_ContainerUsername_faea78e29c334db0bcd7c1f050c91aef }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_52d17f0f72a34863ace24d2d90c4f009 }}
+        username: ${{ secrets.AzureAppService_ContainerUsername_25701f546c424ab9a00a2ce566800dd3 }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_157a41581f8b4f6b969490019e91d503 }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: mikesite.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_faea78e29c334db0bcd7c1f050c91aef }}/overboost:${{ github.sha }}
+        tags: mikesite.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_25701f546c424ab9a00a2ce566800dd3 }}/overboost:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -47,5 +47,5 @@ jobs:
       with:
         app-name: 'overboost'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_9c0195f31b974584bae36ce384ce266f }}
-        images: 'mikesite.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_faea78e29c334db0bcd7c1f050c91aef }}/overboost:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_c4317f24aeff4a379eb3367819c2c581 }}
+        images: 'mikesite.azurecr.io/${{ secrets.AzureAppService_ContainerUsername_25701f546c424ab9a00a2ce566800dd3 }}/overboost:${{ github.sha }}'
