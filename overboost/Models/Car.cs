@@ -9,14 +9,14 @@ namespace overboost.Models
 {
     public class Car
     {
-        public int Id { get; set; }
-        public int Year { get; set; }
-        public string Make { get; set; }
-        public string Model { get; set; }
+        public string? Id { get; set; }
+        public int? Year { get; set; }
+        public string? Make { get; set; }
+        public string? Model { get; set; }
         [JsonPropertyName("img")]
-        public string Image { get; set; }
-        public string Description { get; set; }
-        public int[] Ratings { get; set; }
+        public string? Image { get; set; }
+        public string? Description { get; set; }
+        public int[]? Ratings { get; set; }
 
         public override string ToString() => JsonSerializer.Serialize(this);
     }

@@ -1,0 +1,116 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@using overboost.Models
+@using overboost.Services
+@inject JsonFileCarsService CarsService
+
+<div class="card-columns">
+    @foreach (var Car in CarsService.GetCars())
+    {
+            <div class="card">
+                <div class="card-img" style="background-image: url('@Car.Image');"></div>
+                <div class="card-body">
+                    <h5 class="card-title">@Car.Year</h5>
+                    <h5 class="card-title">@Car.Make @Car.Model</h5>
+                    <h5 class="card-title">@Car.Description</h5>
+                </div>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">
+                    <button @onclick="(e => SelectCar(Car?.Id ?? string.Empty))"
+                        data-toggle="modal" data-target="#productModal" class="btn btn-primary">More Info</button>
+                </small>
+            </div>
+    }
+</div>
+
+<div class="modal fade" id="carModal" tabindex="-1" role="dialog" aria-labelledby="carYear" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        @if (selectedCar != null)
+        {
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="carYear">@selectedCar.Year</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="card">
+                        <div class="card-img" style="background-image: url('@selectedCar.Image');">
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">@selectedCar.Description</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    @if (voteCount == 0)
+                    {
+                        <span>Be the first to vote!</span>
+                    }
+                    else
+                    {
+                        <span>@voteCount @voteLabel</span>
+                    }
+                    @for (int i = 1; i < 5; i++)
+                    {
+                        var currentStar = i;
+                        if (i <= currentRating)
+                        {
+                            <span class="fa fa-star checked" @onclick="(e => SubmitRating(currentStar))"></span>
+                        }
+                        else
+                        {
+                            <span class="fa fa-star" @onclick="(e => SubmitRating(currentStar))"></span>
+                        }
+                    }
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+@code {
+    Car selectedCar;
+    String selectedCarId;
+
+    void SelectCar(string carId)
+    {
+        selectedCarId = carId;
+        selectedCar = CarsService.GetCars().First(x => x.Id == carId);
+        GetCurrentRating();
+    }
+
+    int currentRating = 0;
+    int voteCount = 0;
+    string? voteLabel;
+
+    void GetCurrentRating()
+    {
+        if (selectedCar?.Ratings == null)
+        {
+            currentRating = 0;
+            voteCount = 0;
+        }
+        else
+        {
+            voteCount = selectedCar.Ratings.Count();
+            voteLabel = voteCount > 1 ? "Votes" : "Vote";
+            currentRating = selectedCar.Ratings.Sum() / voteCount;
+        }
+
+        System.Console.WriteLine($"Current rating for {selectedCar?.Id}: {currentRating}");
+    }
+
+    void SubmitRating(int rating)
+    {
+        System.Console.WriteLine($"Rating received for {selectedCar?.Id}: {rating}");
+        if (selectedCarId == null)
+            return;
+        CarsService.AddRating(selectedCarId, rating);
+        SelectCar(selectedCarId);
+    }
+}
+}

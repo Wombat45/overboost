@@ -8,7 +8,7 @@ namespace overboost.Pages
     {
         private readonly ILogger<IndexModel> _logger;
         public JsonFileCarsService CarsService { get; }
-        public IEnumerable<Car> Cars { get; private set; }
+        public IEnumerable<Car>? Cars { get; private set; }
 
         public IndexModel(
             

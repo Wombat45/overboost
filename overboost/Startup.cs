@@ -1,4 +1,6 @@
-﻿using overboost.Services;
+﻿using overboost.Models;
+using overboost.Services;
+using System.Text.Json;
 
 namespace overboost
 {
@@ -46,12 +48,12 @@ namespace overboost
                 endpoints.MapControllers();
                 endpoints.MapBlazorHub();
 
-                // endpoints.MapGet("/products", (context) => 
-                // {
-                //     var products = app.ApplicationServices.GetService<JsonFileProductService>().GetProducts();
-                //     var json = JsonSerializer.Serialize<IEnumerable<Product>>(products);
-                //     return context.Response.WriteAsync(json);
-                // });
+                //endpoints.MapGet("/cars", (context) => 
+                //{
+                //    var cars = app.ApplicationServices.GetService<JsonFileCarsService>().GetCars();
+                //    var json = JsonSerializer.Serialize<IEnumerable<Car>>(cars);
+                //    return context.Response.WriteAsync(json);
+                //});
             });
         }
     }

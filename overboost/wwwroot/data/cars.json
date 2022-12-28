@@ -1,6 +1,6 @@
 [
     {
-        "Id": 1,
+        "Id": "1",
         "Year": 1992,
         "Make": "Toyota",
         "Model": "Camry",
@@ -9,7 +9,7 @@
         "Ratings": null
     },
     {
-        "Id": 2,
+        "Id": "2",
         "Year": 1995,
         "Make": "GMC",
         "Model": "Sierra",
@@ -18,7 +18,7 @@
         "Ratings": null
     },
     {
-        "Id": 3,
+        "Id": "3",
         "Year":2001,
         "Make": "Toyota",
         "Model": "Corolla",
@@ -27,7 +27,7 @@
         "Ratings": null
     },
     {
-        "Id": 4,
+        "Id": "4",
         "Year": 2001,
         "Make": "Subaru",
         "Model": "Legacy",
@@ -36,7 +36,7 @@
         "Ratings": null
     },
     {
-        "Id": 5,
+        "Id": "5",
         "Year": 2002,
         "Make": "Toyota",
         "Model": "Avalon",
@@ -45,7 +45,7 @@
         "Ratings": null
     },
     {
-        "Id": 6,
+        "Id": "6",
         "Year": 2007,
         "Make": "Mazda",
         "Model": "Mazdaspeed3",
@@ -54,7 +54,7 @@
         "Ratings": null
     },
     {
-        "Id": 7,
+        "Id": "7",
         "Year": 2000,
         "Make": "Jeep",
         "Model": "Grand Cherokee",
@@ -63,16 +63,16 @@
         "Ratings": null
     },
     {
-        "Id": 8,
+        "Id": "8",
         "Year": 1994,
         "Make": "Mazda",
         "Model": "Miata",
-        "img": "imgs/cars/miata.jpg",
+        "img": "imgs/cars/miata.JPG",
         "Description": "1.8 i4: 95hp",
         "Ratings": null
     },
     {
-        "Id": 9,
+        "Id": "9",
         "Year": 2019,
         "Make": "Volkswagen",
         "Model": "Jetta",
@@ -81,7 +81,7 @@
         "Ratings": null
     },
     {
-        "Id": 10,
+        "Id": "10",
         "Year": 2019,
         "Make": "Volkswagen",
         "Model": "GTI",
@@ -90,7 +90,7 @@
         "Ratings": null
     },
     {
-        "Id": 11,
+        "Id": "11",
         "Year": 2018,
         "Make": "Audi",
         "Model": "A3",
